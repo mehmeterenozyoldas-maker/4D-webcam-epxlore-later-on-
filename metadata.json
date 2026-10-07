@@ -1,0 +1,6 @@
+{
+  "name": "Volumetric MRI Raymarching Engine",
+  "description": "Real-time 3D volumetric raymarching and slice accumulation engine for MRI, CT, webcam, and video streams with WebGL2 GLSL shaders and bloom.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

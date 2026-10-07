@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  canvas {
+    display: block;
+  }
+}
+
+/* Custom sci-fi scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 15, 10, 0.5);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 150, 0.3);
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 150, 0.7);
+}
+
+/* CRT / Radar subtle scanline overlay */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  ),
+  linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+/* lil-gui custom cyberpunk theme overrides */
+.lil-gui {
+  --background-color: rgba(0, 15, 10, 0.88) !important;
+  --text-color: #a7f3d0 !important;
+  --title-background-color: rgba(0, 30, 20, 0.95) !important;
+  --widget-color: rgba(0, 255, 150, 0.15) !important;
+  --hover-color: rgba(0, 255, 150, 0.3) !important;
+  --focus-color: #00ff99 !important;
+  --number-color: #38bdf8 !important;
+  --string-color: #facc15 !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  border: 1px solid rgba(0, 255, 150, 0.4) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 25px rgba(0, 255, 150, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.lil-gui .title {
+  color: #00ff99 !important;
+  font-weight: bold !important;
+  letter-spacing: 1.5px !important;
+}
